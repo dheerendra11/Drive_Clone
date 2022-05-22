@@ -260,3 +260,782 @@ body {
   .album-body .picture-view .picture-main{
     width: 90%;
   }  
+
+
+
+#header{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    /* background-color: antiquewhite; */
+    /* background-color: rgb(109, 20, 196); */
+    background-color: rgb(240, 234, 214);
+    border-radius: 10px;
+    justify-content: center;
+}
+
+/* #header button {
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+} */
+
+
+#addfolder {
+    padding: 8px;
+    min-width: 100px;
+    color: white;
+    background-color:purple;
+    /* background-color: rgb(109, 20, 196); */
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 300ms;
+    outline: none;
+  }
+  #addTextFile {
+    margin-left: 10px;
+    padding: 8px;
+    min-width: 100px;
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 300ms;
+    outline: none;
+  }
+  #addalbum {
+    margin-left: 10px;
+    padding: 8px;
+    min-width: 100px;
+    color: white;
+    background-color: purple;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 300ms;
+    outline: none;
+  }
+
+#header button:hover {
+    transform: scale(1.05);
+    background-color: lightyellow;
+    color : black;
+    transition: 500ms;
+}
+
+#breadcrumb{
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+    border-radius: 2px;
+    background-color: rgb(216, 250, 215);
+    /* padding: 5px; */
+}
+
+#breadcrumb a {
+    background-color: skyblue;
+    padding: 10px;
+    /* padding-left: 10px; */
+    border-right: 5px solid lightsalmon;
+    /* border-left: 5px solid whitesmoke; */
+    border-radius: 2px;
+    transition: 200ms;
+}
+
+#breadcrumb a:hover {
+    background-color: lightpink;
+    transform: scale(1.01);
+    font-weight: 600;
+    /* text-decoration: underline; */
+    /* transition: 200ms; */
+}
+
+#container{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    border-radius: 2px;
+    flex-wrap: wrap; 
+    background-color: rgb(225, 236, 195);
+    /* align-self: center; */
+}
+
+.folder {
+    background-color: lightpink;
+    width: 145px;
+    padding: 10px;
+    margin: 7px;
+    color: black;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    /* border-radius: 0px; */
+    box-shadow: 2px 2px 3px 1px lightgrey;
+    transition: 300ms;
+    word-wrap: break-word;
+    position: relative;
+    /* top: 8px; */
+    border-radius: 2px;
+    /* transform: scale(1.05); */
+    
+}
+
+.folder:hover{
+    transform: scale(1.05);
+    transition: 500ms;
+}
+.folder [action]{
+    /* text-decoration: underline; */
+    cursor: pointer;
+    /* margin-right: 5px; */
+    
+}
+
+.folder [purpose=name]{
+    margin-top: 80px;
+    font-weight: 600;
+    display: flex;
+   justify-content: center;
+   
+}
+
+.folder [action]:hover {
+    color: red;
+    transform: scale(2);
+    transition: 500ms;
+}
+
+.folder[pressed=true], .text-file[pressed=true], .album[pressed=true]{
+    transform: scale(1.02);
+    border: 2px solid white;
+    box-shadow: 2px 2px 5px red;
+}
+
+.text-file {
+    background-color: rgb(231, 180, 231); 
+     /* background-color: #9de6e7;  */
+     width: 145px;
+     padding: 10px;
+     margin: 7px;
+     color: black;
+     font-size: 15px;
+     font-family: Arial, Helvetica, sans-serif;
+     border-radius: 2px;
+     box-shadow: 5px 5px 10px 1px lightgrey;
+     transition: 300ms;
+     word-wrap: break-word;
+     position: relative;
+     /* transform: scale(1.05); */
+     /* top: 8px */
+}
+
+.text-file:hover{
+    transform: scale(1.05);
+    transition: 500ms;
+}
+
+
+.text-file [action]{
+    /* text-decoration: underline; */
+    cursor: pointer;
+}
+
+.text-file [action]:hover {
+    color: red;
+    transform: scale(2);
+    transition: 500ms;
+}
+
+.text-file [purpose=name]{
+    margin-top: 80px;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+ }
+
+.album {
+    background-color : rgb(183, 183, 248); 
+    /* background-color: #8af8dd;  */
+    width: 145px;
+     padding: 10px;
+     margin: 7px;
+     color: black;
+     font-size: 15px;
+     font-family: Arial, Helvetica, sans-serif;
+     border-radius: 2px;
+     box-shadow: 5px 5px 10px 1px lightgrey;
+     transition: 300ms;
+     word-wrap: break-word;
+     position: relative;
+     /* top: 8px */
+}
+
+.album:hover{
+    transform: scale(1.05);
+    transition: 500ms;
+}
+
+.album div[purpose=name]{
+    margin-top: 80px;
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+}
+
+.album [action]{
+    /* text-decoration: underline; */
+    cursor: pointer;
+}
+
+.album [action]:hover {
+    color: red;
+    transform: scale(2);
+    transition: 500ms;
+}
+
+
+#app{
+    border: 1px solid black;
+    margin: 10px;
+    /* padding: 10px; */
+    /* display: flex; */
+    border-radius: 2px;
+    flex-wrap: wrap; 
+
+    /* margin-top: 30px; */
+    /* border: 2px dashed rgb(76, 243, 84); */
+    background-color: rgb(209, 252, 237);
+    /* width: 90%; */
+
+    /* border: 5px solid blue; */
+    /* margin: 10px; */
+}
+
+#app-title-bar {
+    display: flex;
+    /* background-color: cyan; */
+    height: 40px;
+}
+
+#app-title {
+    width: 94%;
+    text-align: center;
+    /* margin: 5px; */
+    font-weight:bold ;
+    /* border-right: 5px solid red; */
+}
+
+#app-menu-bar {
+    display: flex;
+    background-color: rgb(151, 231, 202);
+    height: 40px;
+}
+
+#app-body {
+    display: flex;
+    background-color:white;
+    /* height: 500px; */
+}
+
+#app-body #forfile{
+    background-color : rgb(183, 183, 248); 
+    /* background-color: rgb(109, 20, 196); */
+    /* background-color: #8af8dd;  */
+     width: 145px;
+     height: 100px;
+     padding: 10px;
+     margin: 7px;
+     color: black;
+     justify-content:center ;
+     font-size: 15px;
+     font-family: Arial, Helvetica, sans-serif;
+     border-radius: 2px;
+     box-shadow: 5px 5px 10px 1px lightgrey;
+     transition: 300ms;
+     word-wrap: break-word;
+     position: relative;
+     /* margin-top: 80px; */
+    display: flex;
+    font-weight: 600;
+    /* justify-content: center; */
+} 
+
+#app-body #forImage{
+    background-color : rgb(183, 183, 248); 
+    /* background-color: #8af8dd;  */
+     width: 145px;
+     height: 100px;
+     padding: 10px;
+     margin: 7px;
+     color: black;
+     font-size: 15px;
+     font-family: Arial, Helvetica, sans-serif;
+     border-radius: 2px;
+     box-shadow: 5px 5px 10px 1px lightgrey;
+     transition: 300ms;
+     word-wrap: break-word;
+     position: relative;
+     /* margin-top: 80px; */
+    display: flex;
+    font-weight: 600;
+    justify-content: center;
+} 
+
+.notepad-menu{
+    width: 100%;
+    padding: 5px;
+    /* cursor: pointer; */
+}
+
+.notepad-menu * {
+    margin: 0px 5px;
+    padding: 2px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.notepad-menu span {
+    vertical-align: bottom;
+    cursor: pointer;
+    
+}
+
+.notepad-menu span:hover {
+    
+    border: 2px solid black;
+    background-color: white;
+    color: teal;
+    transform: scale(1.02);
+    transition: 200ms;
+}
+
+
+.notepad-menu [pressed=true] {
+    border: 2px solid black;
+    background-color: white;
+    color: teal;
+}
+
+.notepad-menu input[type=color] {
+    width: 30px;
+    position: relative;
+}
+
+.notepad-menu select {
+    height: 30px;
+    position: relative;
+}
+
+.notepad-body {
+    /* background-color: aquamarine; */
+    height: 100%;
+    width: 100%;
+}
+
+.notepad-body textarea{
+    outline: none;
+    background-color: aquamarine;
+    border: none;
+    padding: 10px;
+    /* width: 98%; */
+    height: 400px;
+    /* height: 100%; */
+    width: 100%;
+}
+
+[purpose=download]{
+    display: none;
+}
+
+/* input[action=upload]{
+    display: none;
+} */
+
+#win-actions span {
+    cursor: pointer;
+}
+
+#win-actions span:hover {
+    color: blue;
+}
+
+.notepad-menu input[action=upload]
+{
+    display: none;
+}
+
+.album-body{
+    height: 100%;
+    width : 100%;
+    padding: 5px;
+}
+
+.picture-list{
+    border: 1px solid black;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+
+.picture-list img{
+    height: 90%;
+    border: 2px solid teal;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.picture-list img:hover{
+    transform: scale(1.1);
+    border: 2px solid rgba(22, 21, 21, 0.945);
+}
+
+.picture-view{
+    border: 1px solid black;
+    height: 350px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+
+.picture-view > div{
+    border: 1px solid white;
+    height: 100%;
+}
+
+.picture-view .move-left{
+    width: 15%;
+}
+
+.picture-view .picture-main{
+    
+    padding: 5px;
+    width: 70%;
+    display: flex;
+}
+
+.picture-view .picture-main img{
+    height: 100%;
+}
+
+/* #header{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#header button {
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#header button:hover {
+    transform: scale(1.05);
+    background-color: lightyellow;
+}
+
+#breadcrumb{
+    border: 1px solid black;
+    margin: 10px;
+    display: flex;
+}
+
+#breadcrumb a {
+    background-color: tomato;
+    padding: 10px;
+    border-right: 5px solid black;
+}
+
+#breadcrumb a:hover {
+    background-color: teal;
+    text-decoration: underline;
+}
+
+#container{
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+}
+
+.folder {
+    background-color: teal;
+    color:white;
+    height: 120px;
+    width: 150px;
+
+    margin: 10px;
+    padding: 10px;
+
+    border:2px solid red;
+    border-radius: 10px;
+}
+
+.folder div[purpose=name]{
+    margin-top: 80px;
+}
+
+.folder [action]{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.folder [action]:hover {
+    color: blue;
+    transform: scale(2);
+}
+
+
+.text-file {
+    background-color: lightcoral;
+    color:white;
+    height: 120px;
+    width: 150px;
+
+    margin: 10px;
+    padding: 10px;
+
+    border:2px solid red;
+    border-radius: 10px;
+}
+
+.text-file div[purpose=name]{
+    margin-top: 80px;
+}
+
+.text-file [action]{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.text-file [action]:hover {
+    color: blue;
+    transform: scale(2);
+}
+
+.album {
+    background-color: cyan;
+    color:white;
+    height: 120px;
+    width: 150px;
+
+    margin: 10px;
+    padding: 10px;
+
+    border:2px solid red;
+    border-radius: 10px;
+}
+
+.album div[purpose=name]{
+    margin-top: 80px;
+}
+
+.album [action]{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.album [action]:hover {
+    color: blue;
+    transform: scale(2);
+}
+
+#app{
+    border: 5px solid blue;
+    margin: 10px;
+}
+
+#app-title-bar {
+    display: flex;
+    background-color: cyan;
+    height: 40px;
+}
+
+#app-title {
+    width: 94%;
+    text-align: center;
+    border-right: 5px solid red;
+}
+
+#app-menu-bar {
+    display: flex;
+    background-color: teal;
+    height: 40px;
+}
+
+#app-body {
+    display: flex;
+    background-color:springgreen;
+    height: 500px;
+}
+
+.notepad-menu{
+    width: 100%;
+    padding: 5px;
+}
+
+.notepad-menu * {
+    margin: 0px 5px;
+    padding: 2px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.notepad-menu span {
+    vertical-align: bottom;
+    
+}
+
+.notepad-menu span:hover {
+    border: 2px solid black;
+    background-color: white;
+    color: teal;
+}
+
+
+.notepad-menu [pressed=true] {
+    border: 2px solid black;
+    background-color: white;
+    color: teal;
+}
+
+.notepad-menu input[type=color] {
+    width: 30px;
+}
+
+.notepad-menu select {
+    height: 30px;
+}
+
+.notepad-body {
+    height: 100%;
+    width: 100%;
+}
+
+.notepad-body textarea{
+    height: 100%;
+    width: 100%;
+}
+
+[purpose=download]{
+    display: none;
+}
+
+input[action=upload]{
+    display: none;
+}
+
+#win-actions span {
+    cursor: pointer;
+}
+
+#win-actions span:hover {
+    color: blue;
+}
+
+.notepad-menu input[action=upload]{
+    display: none;
+}
+
+.album-menu{
+    width: 100%;
+    padding: 5px;
+}
+
+.album-menu * {
+    margin: 0px 5px;
+    padding: 2px;
+    cursor: pointer;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.album-menu span {
+    vertical-align: bottom;
+    
+}
+
+.album-menu span:hover {
+    border: 2px solid black;
+    background-color: white;
+    color: teal;
+}
+
+.album-body {
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+}
+
+.picture-list {
+    border: 1px solid black;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+
+.picture-list img {
+    height: 90%;
+    border: 2px solid teal;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.picture-list img:hover {
+    transform: scale(1.1);
+    border: 2px solid hsl(66, 87%, 9%);
+}
+
+.picture-list img[pressed=true]{
+    transform: scale(1.02);
+    border: 2px solid white;
+    box-shadow: 2px 2px 5px red;
+}
+
+.picture-view {
+    border: 1px solid black;
+    height: 350px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+}
+
+.picture-view > div {
+    height: 100%;
+}
+
+.picture-view .move-left {
+    width: 15%;
+}
+
+.picture-view .picture-main {
+    padding: 5px;
+    width: 70%;
+    display: flex;
+}
+
+.picture-view .picture-main img {
+    height: 100%;
+}
+
+.picture-view .move-right {
+    width: 15%;
+} */

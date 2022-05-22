@@ -562,6 +562,7 @@
         }
     
         this.setAttribute("pressed", true);
+        saveToStorage();
     }
 
     function downloadNotepad(){
